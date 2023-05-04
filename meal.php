@@ -5,7 +5,6 @@
             <meta http-equiv="X-UA-Compatable" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" type="text/css" href="welcomestyle.css">
-
             <style>
         .button {
         border: none;
@@ -24,11 +23,9 @@
     </head>
     <body>
     <a href="food.php"><button class="button button1">+FOOD</button></a>
-    <a href="meal.php"><button class="button button1">+MEAL</button></a>
+    <a href="welcome.php"><button class="button button1">HOME</button></a>
     <a href="review.php"><button class="button button1">REVIEWS</button></a>
     <a href="index.php"><button class="button button1">LOGOUT</button></a>
-    </div>
-        <h1> Hello, User! </h1> </br></br>
-        <h1> Your Average Daily Calorie Intake Is: </h1>
+        <h1> MEAL! </h1> </br></br>
 </body>
 </html> 
