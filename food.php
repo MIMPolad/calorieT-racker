@@ -33,6 +33,8 @@
                 <input type="text" id="foodname" name="foodname"></br></br>
                 <label>Brand: </label>
                 <input type="text" id="foodbrand" name="foodbrand"></br></br>
+                <label>Calories: </label>
+                <input type="text" id="foodcalories" name="foodcalories"></br></br>
                 <label>portion Size: </label>
                 <input type="text" id="foodporsize" name="foodporsize"></br></br>
                 <label>Cost (rounded to the nearest USD): </label>

@@ -5,9 +5,10 @@
     $brand = $_POST['foodbrand'];
     $porsize = $_POST['foodporsize'];
     $cost = $_POST['foodcost'];
+    $calories = $_POST['foodcalories'];
 
     
-    $query = "insert into food(name,brand,portionSize,cost) values ('$name','$brand','$porsize','$cost')";
+    $query = "insert into food(name,brand,portionSize,cost,calories) values ('$name','$brand','$porsize','$cost','$calories')";
 
     $run = mysqli_query($conn,$query);
 

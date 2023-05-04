@@ -26,6 +26,40 @@
     <a href="meal.php"><button class="button button1">+MEAL</button></a>
     <a href="welcome.php"><button class="button button1">HOME</button></a>
     <a href="index.php"><button class="button button1">LOGOUT</button></a>
-        <h1> REVIEW! </h1> </br></br>
+    <div id="form">
+            <h1>Add A Review</h1>
+            <form name="reviewform" action="insertReview.php" onsubmit="return isvalidreview()" method="POST">
+                <label>Name of Food you want to review: </label>
+                <input type="text" id="foodreview" name="foodreview"></br></br>
+                <label>rating(out of 10): </label>
+                <input style ="width:50px" type="text" id="foodrating" name="foodrating"></br></br>
+                <label>Review: </label>
+                <input style="width:1600px;" type="text" id="review" name="review"></br></br>
+                <input type="submit" id="btn" value="Submit Review" name = "reviewsubmit"/>
+            </form>
+        </div>
+
+        <script>
+            function isvalidreview(){
+                var food = document.reviewform.foodreview.value;
+                var rating = document.reviewform.foodrating.value;
+                var review = document.reviewform.review.value;
+                if(food.length == ""){
+                    alert("food field is empty!");
+                    return false;
+                }
+                else if(rating.length == ""){
+                    alert("rating is empty!");
+                    return false;
+                }
+                else if(review.length == ""){
+                    alert("review field is empty!");
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }            
+        </script>
 </body>
 </html> 
