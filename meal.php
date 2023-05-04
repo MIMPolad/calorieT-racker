@@ -25,26 +25,32 @@
     <a href="food.php"><button class="button button1">+FOOD</button></a>
     <a href="welcome.php"><button class="button button1">HOME</button></a>
     <a href="review.php"><button class="button button1">REVIEWS</button></a>
-    <a href="index.php"><button class="button button1">LOGOUT</button></a>
+    <a href="logout.php"><button class="button button1" name = 'logout'>LOGOUT</button></a>
     <div id="form">
             <h1>What did you eat today?</h1>
-            <form name="mealform" action="insertmeal.php" onsubmit="return isvalidmeal()" method="POST">
-                <label>Food Name: </label>
-                <input type="text" id="mealname" name="mealname"></br></br>
+            <form name="mealform" action="insertmeal.php" method="POST">
+                <label> Food 1: </label>
+                <input type="text" id="food1" name="food1"></br></br>
+                <label> Food 2: </label>
+                <input type="text" id="food2" name="food2"></br></br>
+                <label> Food 3: </label>
+                <input type="text" id="food3" name="food3"></br></br>
+                <label> Food 4: </label>
+                <input type="text" id="food4" name="food4"></br></br>
+                <label> Food 5: </label>
+                <input type="text" id="food5" name="food5"></br></br>
+                <label> Food 6: </label>
+                <input type="text" id="food6" name="food6"></br></br>
+                <label> Food 7: </label>
+                <input type="text" id="food7" name="food7"></br></br>
+                <label> Food 8: </label>
+                <input type="text" id="food8" name="food8"></br></br>
+                <label> Food 9: </label>
+                <input type="text" id="food9" name="food9"></br></br>
+                <label> Food 10: </label>
+                <input type="text" id="food10" name="food10"></br></br>
                 <input type="submit" id="btn" value="ADD MEAL" name = "mealsubmit"/>
             </form>
         </div>
-        <script>
-            function isvalidmeal(){
-                var food = document.mealform.mealname.value;
-                if(food.length == ""){
-                    alert("food field is empty!");
-                    return false;
-                }
-                else{
-                    return true;
-                }
-            }            
-        </script>
 </body>
 </html> 

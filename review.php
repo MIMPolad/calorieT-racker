@@ -25,7 +25,7 @@
     <a href="food.php"><button class="button button1">+FOOD</button></a>
     <a href="meal.php"><button class="button button1">+MEAL</button></a>
     <a href="welcome.php"><button class="button button1">HOME</button></a>
-    <a href="index.php"><button class="button button1">LOGOUT</button></a>
+    <a href="logout.php"><button class="button button1" name = 'logout'>LOGOUT</button></a>
     <div id="form">
             <h1>Add A Review</h1>
             <form name="reviewform" action="insertReview.php" onsubmit="return isvalidreview()" method="POST">

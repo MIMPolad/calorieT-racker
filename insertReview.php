@@ -28,7 +28,7 @@
         $result2 = mysqli_fetch_array($result);
         $rating = $result2[0];
 
-        $query = "update food set userRating = '$rating'";
+        $query = "update food set userRating = '$rating' where ID = '$foodid'";
         $run = mysqli_query($conn,$query);
 
     }

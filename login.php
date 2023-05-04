@@ -8,12 +8,9 @@
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($result);
     $count = mysqli_num_rows($result);
-    session_start();
-    $currentUsername = $row[0];
-    //$currentUserid = $row[1];
-    $_SESSION['currentUsername'] = $currentUsername;
-    //$_SESSION['currentUserid'] = $currentUserid;
+
     if($count == 1){ //if there is any user with matching user and pass
+        $result = mysqli_query($conn,"update user set isloggedin = 1 where name = '$username' and password = '$password'");
         header("Location:welcome.php");
     } 
     else{
