@@ -1,0 +1,18 @@
+body{
+    background-color: tan;
+}
+#btn{
+    color: black;
+    background-color: gainsboro;
+    padding: 10px;
+    font-size: large;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:700px) {
+    #form{
+        width:65%;
+        padding: 40px; 
+    }
+    
+}
