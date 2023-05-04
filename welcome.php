@@ -1,3 +1,7 @@
+<?php
+    include("login.php");
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,7 +32,6 @@
     <a href="review.php"><button class="button button1">REVIEWS</button></a>
     <a href="index.php"><button class="button button1">LOGOUT</button></a>
     </div>
-        <h1> Hello, User! </h1> </br></br>
         <h1> Your Average Daily Calorie Intake Is: </h1>
 </body>
 </html> 

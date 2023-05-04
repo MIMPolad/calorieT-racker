@@ -37,7 +37,7 @@
                 <input type="text" id="foodcalories" name="foodcalories"></br></br>
                 <label>portion Size: </label>
                 <input type="text" id="foodporsize" name="foodporsize"></br></br>
-                <label>Cost (rounded to the nearest USD): </label>
+                <label>Cost: $ </label>
                 <input type="text" id="foodCost" name="foodcost"></br></br>
                 <input type="submit" id="btn" value="ADD FOOD" name = "foodsubmit"/>
             </form>

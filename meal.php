@@ -26,6 +26,25 @@
     <a href="welcome.php"><button class="button button1">HOME</button></a>
     <a href="review.php"><button class="button button1">REVIEWS</button></a>
     <a href="index.php"><button class="button button1">LOGOUT</button></a>
-        <h1> MEAL! </h1> </br></br>
+    <div id="form">
+            <h1>What did you eat today?</h1>
+            <form name="mealform" action="insertmeal.php" onsubmit="return isvalidmeal()" method="POST">
+                <label>Food Name: </label>
+                <input type="text" id="mealname" name="mealname"></br></br>
+                <input type="submit" id="btn" value="ADD MEAL" name = "mealsubmit"/>
+            </form>
+        </div>
+        <script>
+            function isvalidmeal(){
+                var food = document.mealform.mealname.value;
+                if(food.length == ""){
+                    alert("food field is empty!");
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }            
+        </script>
 </body>
 </html> 
