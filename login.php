@@ -6,8 +6,13 @@
     
     $sql = "select * from user where name = '$username' and password = '$password'"; //select all from user that match the name and pass typed in
     $result = mysqli_query($conn,$sql);
-    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    $row = mysqli_fetch_array($result);
     $count = mysqli_num_rows($result);
+    session_start();
+    $currentUsername = $row[0];
+    //$currentUserid = $row[1];
+    $_SESSION['currentUsername'] = $currentUsername;
+    //$_SESSION['currentUserid'] = $currentUserid;
     if($count == 1){ //if there is any user with matching user and pass
         header("Location:welcome.php");
     } 

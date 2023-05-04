@@ -1,7 +1,8 @@
-<?php
-    include("login.php");
+<?php  
+    session_start();
+    echo '<div style="font-size:1.5em;color:black;font-wight:bold"> WELCOME, ' . $_SESSION['currentUsername'] .' ! </div>';
+   // $currentUserId = $_SESSION['currentuserid']; //for avg cals?idkanymore...
  ?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -33,5 +34,6 @@
     <a href="index.php"><button class="button button1">LOGOUT</button></a>
     </div>
         <h1> Your Average Daily Calorie Intake Is: </h1>
+       
 </body>
 </html> 
