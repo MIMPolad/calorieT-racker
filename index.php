@@ -24,7 +24,7 @@
         </div>
         <div id="form">
             <h1>No Account Yet? No Problem!</h1>
-            <form name="signupform" action="login.php" onsubmit="return isvalidsignup()" method="POST">
+            <form name="signupform" action="signup.php" onsubmit="return isvalidsignup()" method="POST">
                 <label>Username/Name: </label>
                 <input type="text" id="signupuser" name="signupuser"></br></br>
                 <label>Password: </label>

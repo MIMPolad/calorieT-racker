@@ -6,12 +6,19 @@
     $phone = $_POST['signupphone'];
     $email = $_POST['signupemail'];
 
-    $query = "insert into user(name,password,phone#,email,ID,AvgDailyCals) values ($username,$password,$phone,$email,'','')";
+    //seperate query for id
+    $query = "select MAX(ID) from user";
+
+    $id = mysqli_query($conn,$query);
+
+    $id++;
+
+    $query = "insert into user values ('$username','$id','$phone','$email','$password',0)";
 
     $run = mysqli_query($conn,$query);
     
     if($run){
-        echo "form submitted successfully";
+       echo "form submitted";
     }
     else{
         echo "form not submitted";
