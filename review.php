@@ -33,7 +33,7 @@
                 <input type="text" id="foodreview" name="foodreview"></br></br>
                 <label>rating(out of 10): </label>
                 <input style ="width:50px" type="text" id="foodrating" name="foodrating"></br></br>
-                <label>Review: </label>
+                <label>Review (please do not add ' or "): </label>
                 <input style="width:1600px;" type="text" id="review" name="review"></br></br>
                 <input type="submit" id="btn" value="Submit Review" name = "reviewsubmit"/>
             </form>
