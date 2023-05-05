@@ -60,6 +60,8 @@
     $row = mysqli_fetch_object($result);
     $totalcals += $row->calories;
 
+    if($totalcals != 0){
+
     $timeEaten = date('Y-m-d');
     $query = "insert into meal(userID,totalCals,timeEaten) values('$userid','$totalcals','$timeEaten')";
     $run = mysqli_query($conn,$query);
@@ -88,5 +90,12 @@
 
 
     
+  }
+else{
+    echo '<script>
+            window.location.href = "meal.php";
+            alert("food does not exist");
+            </script>';
+}
 }
 ?>
