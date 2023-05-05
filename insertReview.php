@@ -12,6 +12,8 @@
 
     $result2 = mysqli_fetch_array($result);
     $foodid = $result2[0];
+
+    if ($foodid != ""){
     
     $query = "insert into review(foodID,rating,description) values ('$foodid','$rating','$review')";
 
@@ -19,11 +21,6 @@
 
     
     if($run){
-        echo '<script>
-            window.location.href = "review.php";
-            alert("review successfully added to database!")
-            </script>';
-            //insert average rating into food with matching id
         $query = "select AVG(rating) from review where foodID = '$foodid'";
         $result = mysqli_query($conn,$query);
         $result2 = mysqli_fetch_array($result);
@@ -39,7 +36,13 @@
             alert("something went wrong, please try again")
             </script>';
     }
-
+}
+else{
+    echo '<script>
+            window.location.href = "review.php";
+            alert("food does not exist")
+            </script>';
+}
 
     
 }
