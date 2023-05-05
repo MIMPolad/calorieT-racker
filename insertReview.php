@@ -2,11 +2,12 @@
     include("connection.php");
     if(isset($_POST['reviewsubmit'])){
     $foodname = $_POST['foodreview'];
+    $brandname = $_POST['brandreview'];
     $rating = $_POST['foodrating'];
     $review = $_POST['review'];
     //for some reason, if the review has a ' or " in it it breaks the query, not sure why.
 
-    $query = "select ID from food where name = '$foodname'";
+    $query = "select ID from food where name = '$foodname' and brand = '$brandname'";
 
     $result = mysqli_query($conn,$query);
 
@@ -21,6 +22,10 @@
 
     
     if($run){
+        echo '<script>
+            window.location.href = "review.php";
+            alert("Review was added to database!")
+            </script>';
         $query = "select AVG(rating) from review where foodID = '$foodid'";
         $result = mysqli_query($conn,$query);
         $result2 = mysqli_fetch_array($result);

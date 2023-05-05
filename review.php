@@ -31,6 +31,8 @@
             <form name="reviewform" action="insertReview.php" onsubmit="return isvalidreview()" method="POST">
                 <label>Name of Food you want to review: </label>
                 <input type="text" id="foodreview" name="foodreview"></br></br>
+                <label>Name of food brand you want to review: </label>
+                <input type="text" id="brandreview" name="brandreview"></br></br>
                 <label>rating(out of 10): </label>
                 <input style ="width:50px" type="text" id="foodrating" name="foodrating"></br></br>
                 <label>Review (please do not add ' or "): </label>
@@ -42,10 +44,15 @@
         <script>
             function isvalidreview(){
                 var food = document.reviewform.foodreview.value;
+                var brand = documnet.reviewform.brandreview.value;
                 var rating = document.reviewform.foodrating.value;
                 var review = document.reviewform.review.value;
                 if(food.length == ""){
                     alert("food field is empty!");
+                    return false;
+                }
+                else if(brand.length == ""){
+                    alert("brand field is empty!");
                     return false;
                 }
                 else if(rating.length == ""){
