@@ -28,7 +28,7 @@
     <a href="logout.php"><button class="button button1" name = 'logout'>LOGOUT</button></a>
         <div id="form">
             <h1>Add a food item!</h1>
-            <form name="foodform" action="insertfood.php" onsubmit="return isvalidfood()" method="POST">
+            <form name="foodform" action="insertfood.php" method="POST">
                 <label>Name: </label>
                 <input type="text" id="foodname" name="foodname"></br></br>
                 <label>Brand: </label>
@@ -42,34 +42,23 @@
                 <input type="submit" id="btn" value="ADD FOOD" name = "foodsubmit"/>
             </form>
         </div>
-        <script>/*
-            removing this is a feature, if you don't know everything about your food you can still input it
-            function isvalidfood(){
-                var name = document.foodform.foodname.value;
-                var brand = document.foodform.foodbrand.value;
-                var porsize = document.foodform.foodporsize.value;
-                var cost = document.foodform.foodcost.value;
-
-                if(name.length == ""){
-                    alert("name field is empty!");
-                    return false;
-                }
-                else if(brand.length == ""){
-                    alert("brand is empty!");
-                    return false;
-                }
-                else if(porsize.length == ""){
-                    alert("portion size field is empty!");
-                    return false;
-                }
-                else if(cost.length == ""){
-                    alert("cost field is empty!");
-                    return false;
-                }
-                else{
-                    return true;
-                }
-            }     */       
-        </script> 
+        <div id="form">
+            <h1>remove a food item</h1>
+            <form name="foodformdelete" action="removefood.php" method="POST">
+                <label>Name: </label>
+                <input type="text" id="foodnameremove" name="foodnameremove"></br></br>
+                <label>Brand: </label>
+                <input type="text" id="brandnameremove" name="brandnameremove"></br></br>
+                <input type="submit" id="btn" value="Remove Food" name = "foodremove"/>
+            </form>
+    </div> 
+    <div id="form">
+            <h1>Look up a food item</h1>
+            <form name="foodformsearch" action="searchfood.php" method="POST">
+                <label>Name: </label>
+                <input type="text" id="foodnamesearch" name="foodnamesearch"></br></br>
+                <input type="submit" id="btn" value="Search" name = "foodsearch"/>
+            </form>
+        </div>
 </body>
 </html> 
